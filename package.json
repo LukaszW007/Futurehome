@@ -1,0 +1,22 @@
+{
+  "name": "WebStorm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "directories": {
+    "test": "test",
+    "start": "webpack"
+  },
+  "dependencies": {
+    "mongoose": "^5.0.15"
+  },
+  "devDependencies": {
+    "mocha": "^5.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
