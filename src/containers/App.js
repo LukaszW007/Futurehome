@@ -1,61 +1,43 @@
 import React from 'react';
+import RepoList from '../components/RepoList';
+
 
 class App extends React.Component {
-    constructor(props){
-        super(props);
+    constructor() {
+        super();
         this.state = {
-            data:
-                [{
-                    id: 1,
-                    text: 'clean room'
-                }, {
-                    id: 2,
-                    text: 'wash the dishes'
-                }, {
-                    id: 3,
-                    text: 'feed my cat'
-                }],
-            input: '',
-            showModal: false
+            searchText: '',
+            repo: []
         };
     }
 
-    inputChange(event) {
-        const inputValue = event.target.value;
-        console.log(inputValue)
-        this.setState({input: inputValue});
+    onChangeHandle(event) {
+        this.setState({searchText: event.target.value});
     }
 
-    render(){
-        return(
-            <div className={style.App}>
-                <Title className={style.title}/>
-                <div className={style.container}>
-                    <div className={style.inputContainer}>
-                        <input className={style.inputItemName}
-                               type={'text'}
-                               value={this.state.input}
-                               onChange={event => this.inputChange(event)}/>
-                        <button className={style.buttonAddItem}
-                                onClick={() => {
-                                    if (this.state.input) {
-                                        this.addTodo(this.state.input)
-                                    }
-                                    this.setState({input: ''})
-                                }
-                                }
-                        >Add item
-                        </button>
-                    </div>
+    onSubmit(event) {
+        event.preventDefault();
+        const {searchText} = this.state;
+        const url = `https://api.github.com/search/repositories?q=topic:${searchText}`;
+        fetch(url)
+            .then(response => response.json())
+            .then(responseJson => this.setState({repo: responseJson.items}));
+    }
 
-                    <TodoList data={this.state.data} triggerModal={(text) => this.triggerShowModal(text)}
-                              removeTodoItem={id => this.removeTodo(id)}/>
-                    <Todo showModal={this.state.showModal} taskText={this.state.text}
-                          triggerToChangeShowModal={(answer) => this.doShowModalFalse(answer)}/>
+    render() {
+        return (
+            <div>
+                <form onSubmit={event => this.onSubmit(event)}>
+                    <label htmlFor="searchText">Search by user name</label>
+                    <input
+                        type="text"
+                        id="searchText"
+                        onChange={event => this.onChangeHandle(event)}
+                        value={this.state.searchText}/>
+                </form>
+                <RepoList repo={this.state.repo}/>
             </div>
-        )
+        );
     }
 }
-
-
-https://github.com/search?q=gis
+export default App;
