@@ -1,6 +1,6 @@
 .sass-cache
 .idea
-.node_modules
+.node_nodules
 
 Skip to content
 This repository
@@ -111,7 +111,7 @@ typings/
 # dotenv environment variables file
 .env
 
-    © 2017 GitHub, Inc.
+    ï¿½ 2017 GitHub, Inc.
     Terms
     Privacy
     Security
