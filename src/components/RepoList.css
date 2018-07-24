@@ -1,14 +1,6 @@
 .repoList{
-    width: 300px;
+    width: 350px;
     padding:0;
     position:relative;
     margin-top: 40vh;
-}
-.listItem{
-    display: flex;
-    border: solid 1px #000000;
-    margin-bottom: 2px;
-}
-.id{
-    flex: 1;
 }

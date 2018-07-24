@@ -46,7 +46,7 @@ class App extends React.Component {
                         onChange={event => this.onChangeHandle(event)}
                         value={this.state.searchText}/>
                 </form>
-                <RepoList repo={this.state.repo}/>
+                <RepoList className={style.list} repo={this.state.repo}/>
             </div>
         );
     }
