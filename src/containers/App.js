@@ -3,6 +3,7 @@ import RepoList from '../components/RepoList';
 import style from './App.css';
 import Title from "../components/Title";
 import Logo from "../components/Logo";
+import Back from "../components/Back";
 
 
 class App extends React.Component {
@@ -47,6 +48,7 @@ class App extends React.Component {
                         value={this.state.searchText}/>
                 </form>
                 <RepoList className={style.list} repo={this.state.repo}/>
+                <Back/>
             </div>
         );
     }
