@@ -1,0 +1,13 @@
+.titleContainer{
+    background-color: rgba(158, 158, 158, 0.08);
+    margin-top: calc(25vh - 150px);
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+}

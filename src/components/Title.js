@@ -5,7 +5,7 @@ class Title extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            titleName: 'Github repositiories search',
+            titleName: 'We will find what you need',
         }
     }
 
