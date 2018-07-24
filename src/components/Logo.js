@@ -1,13 +1,12 @@
 import React from 'react';
 import styleLogo from '../components/Logo.css';
+
 // import pictLogo from '../pictures/logo.png';
 
 class Logo extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-
-        }
+        this.state = {}
     }
 
     render() {

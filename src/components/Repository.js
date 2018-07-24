@@ -10,7 +10,9 @@ class Repository extends React.Component {
 
                 <div className={style.description}>
                     <div><span className={style.divTitle}>Repo name: </span>{this.props.repo.name}</div>
-                    <div><span className={style.divTitle}>URL: </span><a href={this.props.repo.html_url} target="_blank">{this.props.repo.html_url}</a></div>
+                    <div><span className={style.divTitle}>URL: </span><a href={this.props.repo.html_url}
+                                                                         target="_blank">{this.props.repo.html_url}</a>
+                    </div>
                     <div><span className={style.divTitle}>Technology: </span>{this.props.repo.language}</div>
                     <div><span className={style.divTitle}>Description: </span>{this.props.repo.description}</div>
                     <div><span className={style.divTitle}>Created at: </span>{this.props.repo.created_at}</div>

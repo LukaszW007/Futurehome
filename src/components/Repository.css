@@ -1,18 +1,22 @@
-.repo{
+.repo {
     display: flex;
     border: solid 1px #000000;
     margin-bottom: 2px;
 }
-.avatar{
-    flex:1;
+
+.avatar {
+    flex: 1;
     height: 100px;
 }
-.description{
+
+.description {
     flex: 3;
 }
-div{
+
+div {
     color: #747474;
 }
-.divTitle{
+
+.divTitle {
     color: #000000;
 }

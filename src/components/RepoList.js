@@ -15,4 +15,5 @@ class RepoList extends React.Component {
         );
     }
 }
+
 export default RepoList;
